@@ -31,5 +31,103 @@ You can also consolidate an Australia map based on [data.gov.au](https://data.go
 
 #### What I did are
 
-- Click the third link to get JSON file
+- **Click the third link to get JSON file**
 ![Download JSON file from data.gov.au](/img/post1/l2.png)
+![JSON file](/img/post1/l3.png)
+- Convert JSON to CSV  
+I used an [online conversion tool](https://json-csv.com/) to do the job, just easily copy and paste.
+
+- **Merge the file**  
+Copy Column F and G to `Ozdata` Long and Lat column, keep the same order as you download the converted file
+![Merge in Excel](/img/post1/l4.png)
+Fill **group** column with `8`; fill **order** column from `1` to the end of this group; fill **region** as `ACT`; fill **border** as `ACT.NSW`
+![Fill Result](/img/post1/l5.png)   
+Till this step, I generated a complete **Australian state/coast boundaries data**.
+
+- **Test in R-studio**  
+```R
+>library("ggplot2")
+>ggplot()+geom_polygon(data=ozdata_with_ACT,aes(x=long,y=lat,group=group,fill=region))
+```  
+![Map in R Studio](/img/post1/l6.png)  
+Don’t have `ggplot2` library? Just type `install.packages(“ggplot2”)` in R-studio
+
+---
+
+### Step2: Prepare label position data
+
+The logic of labelling the map is overlaying two layers. If we want to overlay a label to map, we need get one position in each state which is the coordinates (long,lat), so we need create a csv file and upload to Power BI as below screenshot. 
+
+I slightly changed the long and lat for ACT, NSW and VIC, because they are very close and the labels will be overlaid by each other.  
+![coordinates](/img/post1/l7.png)  
+**Then, all the external data are ready!**
+
+---
+
+### Step 3: Prepare your data.
+
+Because the state in map data is not unique, to avoid multi-multi join, I create a calculated table
+```DAX
+MapNumber = SUMMARIZE('Member Detail','Member Detail'[State Name],"Members",sum('Member Detail'[NumberofMember]))
+```
+
+---
+
+### Step 4: Build up relationship between datasets
+![Relationship](/img/post1/l8.png)
+
+---
+
+### Step 5: Start your R coding journey
+
+Insert R tile in Power BI, and select the data we need  
+![datafiled](/img/post1/l9.png)
+![R editor](/img/post1/l10.png)
+
+Coding in R script editor
+```R
+#Load ggplot2 library
+library(ggplot2)
+#Order dataset!! this is the step I have been struggling for a very long time, if there is no order the map you get will be teared up
+new<- dataset[order(dataset$group,dataset$order),]
+
+#Power Bi will consolidate all data as one data frame, to improve performance, create a label data frame with unique label position and content data.
+
+label<- unique(dataset[,c("Statemembers","lat.1","long.1")])
+
+#Draw the map layer, using “scale_fill_gradient” to select the colour you want to show in the heat map
+
+ggplot()+geom_polygon(data=new,aes(x=long,y=lat,group=group,fill=Members), colour="white")+expand_limits(x = new$long, y = new$lat) +coord_map()+ scale_fill_gradient( low = "#add8e6", high = "#466BB4")
+
+#Draw the label layer
+
++geom_label(data=label,aes(x=long.1, y=lat.1), colour="#4A4A49", fill="white", label=label$Statemembers, size=4)
+
+#Theme, I like pure white and clean background, you could configure your own one you like
+
++theme(panel.background = element_rect(fill = "white", colour = "white"))+ theme(plot.background = element_rect(fill = "white",colour="white"))+ theme(
+
+ panel.grid.major.y = element_blank(),
+
+ panel.grid.minor.y = element_blank(),
+
+ panel.grid.major.x = element_blank(),
+
+ panel.grid.minor.x = element_blank()
+
+ )+    labs(x=NULL, y=NULL) +  theme(axis.ticks = element_blank()) + theme(axis.text = element_blank())+ guides(fill=FALSE)
+```
+Then I got this, the problem is I can hardly tell the difference between states except QLD from the color  
+![map1](/img/post1/l12.png)
+
+What I did is to modify the map layer as
+
+```R
+ggplot()+geom_polygon(data=new,aes(x=long,y=lat,group=group,fill=log(Members)), colour="white")+expand_limits(x = new$long, y = new$lat) +coord_map()+ scale_fill_gradient( low = "#add8e6", high = "#466BB4")
+```
+
+Let’s have a look at the final output.  
+![Finalmap](/img/post1/l13.png)
+
+Have Fun!
+
