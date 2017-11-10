@@ -34,7 +34,7 @@ You can also consolidate an Australia map based on [data.gov.au](https://data.go
 - **Click the third link to get JSON file**
 ![Download JSON file from data.gov.au](/img/post1/l2.png)
 ![JSON file](/img/post1/l3.png)
-- Convert JSON to CSV  
+- **Convert JSON to CSV**  
 I used an [online conversion tool](https://json-csv.com/) to do the job, just easily copy and paste.
 
 - **Merge the file**  
@@ -84,7 +84,7 @@ Insert R tile in Power BI, and select the data we need
 ![datafiled](/img/post1/l9.png)
 ![R editor](/img/post1/l10.png)
 
-Coding in R script editor
+**Coding in R script editor**
 ```R
 #Load ggplot2 library
 library(ggplot2)
