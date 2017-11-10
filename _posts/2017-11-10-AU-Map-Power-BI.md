@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to draw an Australia Map with Label in Power BI by using R
-image: /img/aumapsquare.jpg
+image: /img/post1/aumapsquare.jpg
 tags:
   - R
   - Power BI
@@ -32,4 +32,4 @@ You can also consolidate an Australia map based on [data.gov.au](https://data.go
 #### What I did are
 
 - Click the third link to get JSON file
-![Download JSON file from data.gov.au](/img/I2.png)
+![Download JSON file from data.gov.au](/img/post1/l2.png)
