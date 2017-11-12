@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Blog
+permalink: "blog"
 subtitle: Recent posts
 show-avatar : true
 use-site-title: true
