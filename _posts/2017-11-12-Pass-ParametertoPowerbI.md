@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Pass Multiple-Values Parameters to SQL Statement in Power BI
-subtitle:  to Design a Dynamic Report
+title: How to Pass Multiple-Values Parameters to SQL Statement
+subtitle:  to Design a Dynamic Power BI Report
 image: /img/post2/avatar.jpg
 tags:
   - Power BI
