@@ -23,6 +23,7 @@ description: "A personal blog about PowerBI, SQL and more."
 
 # List of links in the navigation bar
 navbar-links:
+  Home: "http://ciaeric.github.io"
   Blog: 
     - Posts: "blog"
     - Tags: "tags"
