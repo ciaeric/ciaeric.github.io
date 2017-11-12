@@ -6,7 +6,7 @@ bigimg: 'img/pandaironman.jpg'
 
 ---
 
-### <i class="fa fa-address-card-o" aria-hidden="true"></i> Profile
+### <i class="fa fa-address-card" aria-hidden="true"></i> Profile
 
 Hi there, my name is Eric Dong, and Chinese Name is 董经纬. The reason why I pick Eric as my English Name is because of [**_Eric Clapton_**](https://en.wikipedia.org/wiki/Eric_Clapton) and his song <i class="fa fa-youtube-play" aria-hidden="true"></i> [**_Tears in Heaven_**](https://www.youtube.com/watch?v=JxPj3GAYYZ0), though we were born in totally different ages.
 
