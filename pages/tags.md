@@ -5,6 +5,7 @@ title: Tags
 show-avatar: true
 excerpt:
 search_omit: false
+use-site-title: true
 
 ---
 
