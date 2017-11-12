@@ -2,16 +2,10 @@
 layout: page
 permalink: "aboutme"
 title: About me
-subtitle: Why you'd want to go on a date with me
+bigimg: 'img/pandaironman.jpg'
+
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is Eric Dong, and my Chinese Name is 董经纬. The reason why I pick Eric as my English Name is because of **_[Eric Clapton]_**(https://en.wikipedia.org/wiki/Eric_Clapton) and his song **_[Tears in Heaven]_**(https://www.youtube.com/watch?v=JxPj3GAYYZ0).
 
-- I rock a great mustache
-- I'm extremely loyal to my family
 
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
