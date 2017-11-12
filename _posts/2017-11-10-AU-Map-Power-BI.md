@@ -7,6 +7,7 @@ tags:
   - R
   - Power BI
 published: true
+category: blog
 ---
 
 I’ve been struggling to get an Australia Map with _Label_ in **Power BI**, finally I crack it and I just want to share my experience to you guys.
