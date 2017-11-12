@@ -21,7 +21,7 @@ I moved to Australia from China Mainland in 2015. Currently I am living in Brisb
 - CRM/ERP System:`Oracle Siebel`, `Netsuite`
 - Dashboarding: `Power BI`, `Oracle Hyperion`, `Periscope Data`
 
-### <i class="fa fa-suitcase" aria-hidden="true"></i> Career
+### <i class="fa fa-suitcase" aria-hidden="true"></i> Career  
 Currently I am with <i class="fa fa-sun-o" aria-hidden="true"></i> [**Sunsuper**](https://www.sunsuper.com.au/) - a superannuation fund management company as a Reporting Analyst. 
 I used to serve <i class="fa fa-building" aria-hidden="true"></i> [**IBM China**](https://www.ibm.com) 7 years in different roles, the last position with IBM is 3-years' management consultant in CRM domain. After I moved to Australia, I shifted my career path to technical side and kept focusing on Business Intelligence, especially the year I spent with <i class="fa fa-plane" aria-hidden="true"></i> [**FlightCentre**](http://www.fctgl.com/) makes me feel excited in this direction. 
 
