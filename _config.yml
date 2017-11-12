@@ -14,7 +14,7 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: Eric
+title: Eric's Blog
 
 # Short description of your site
 description: "A personal blog about PowerBI, SQL and more."
@@ -23,7 +23,7 @@ description: "A personal blog about PowerBI, SQL and more."
 
 # List of links in the navigation bar
 navbar-links:
-  Blogs: "posts"
+  Blog: "blog"
   Resources:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
   About Me: "aboutme"  
