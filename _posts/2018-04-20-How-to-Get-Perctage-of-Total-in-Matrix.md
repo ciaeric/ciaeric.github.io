@@ -36,6 +36,7 @@ The key concept is "context", when you put a measure in a Matrix, the column gro
 ### Calculation:
 I created a simple model with sales data and date as below
 ![modelsample](/img/post3/post3-1.PNG)
+
 If we would like to calculate sales number percentage of total by sales rep, we put the the DAX expression should be like this 
 ```
 PercentageofTotal = 
@@ -59,6 +60,7 @@ PercentageofTotal =
 			Sales[Sales ID] in VALUES('Sales Rep'[Sales ID]))
 ```
 ![finalresult](/img/post3/post3-4.PNG)
+
 Now, we get the correct result. It's just a small tip, hope you guys enjoy it. 
 
 Thanks
