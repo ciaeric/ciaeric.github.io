@@ -2,7 +2,7 @@
 layout: post
 title: How to Calculate Percentage of Total in Matrix in Power BI
 subtitle:  a Matrix with both column and row groups
-image: /img/post2/avatar.png
+image: /img/post3/avatar.png
 tags:
   - PowerBI
   - SQL
