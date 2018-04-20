@@ -35,7 +35,7 @@ The key concept is "context", when you put a measure in a Matrix, the column gro
 
 ### Calculation:
 I created a simple model with sales data and date as below
-![modelsample](/img/post3/post3-1.png)
+![modelsample](/img/post3/post3-1.PNG)
 If we would like to calculate sales number percentage of total by sales rep, we put the the DAX expression should be like this 
 ```
 PercentageofTotal = 
@@ -44,10 +44,10 @@ PercentageofTotal =
 		,ALLEXCEPT(Sales,Sales[Sales ID]))
 ```
 We get the right result, the reason is the measure ingored `Car Type` context but preserved `Sales ID`.
-![firstresult](/img/post3/post3-2.png)
+![firstresult](/img/post3/post3-2.PNG)
 
 Of course, we would like show Sales Name instead of ID, so we will drag `Sales Rep Name` from Sales Rep table to the `Columns` in matrix, then the result turn to be like this.
-![wrongresult](/img/post3/post3-3.png)
+![wrongresult](/img/post3/post3-3.PNG)
 
 Apparently, this is incorrect. Though there is relationship between these two tables, the context of `Column` is not correctly set. 
 So, we need to fix the context by adding one more filter:
@@ -58,7 +58,7 @@ PercentageofTotal =
 			ALLEXCEPT(sales,Sales[Sales ID]),
 			Sales[Sales ID] in VALUES('Sales Rep'[Sales ID]))
 ```
-![finalresult](/img/post3/post3-4.png)
+![finalresult](/img/post3/post3-4.PNG)
 Now, we get the correct result. It's just a small tip, hope you guys enjoy it. 
 
 Thanks
