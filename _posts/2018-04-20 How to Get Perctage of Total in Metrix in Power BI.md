@@ -1,12 +1,13 @@
 ---
 layout: post
-title: How to Pass Multiple-Values Parameters to SQL Statement
-subtitle:  to Design a Dynamic Power BI Report
+title: How to Calculate Percentage of Total in Matrix in Power BI
+subtitle:  a Matrix with both column and row groups
 image: /img/post2/avatar.png
 tags:
-  - Power BI
+  - PowerBI
   - SQL
-  - Parameter
+  - DAX
+  - Matrix
 published: true
 category: blog
 ---
