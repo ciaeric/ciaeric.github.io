@@ -148,9 +148,9 @@ How can we do this?
 ``` 
 I **limit the iteration range based on Index Column**, and get column and final output as below
 
-![column](/img/post4/Image6.png)
+![column](/img/post4/Image7.png)
 
-![result](/img/post4/Image7.png)
+![result](/img/post4/Image8.png)
 
 
 Now, Bank Super-E is very happy with this report:) Hope you are happy with this content as well!
