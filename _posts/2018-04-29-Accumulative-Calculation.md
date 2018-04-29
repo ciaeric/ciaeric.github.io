@@ -57,7 +57,7 @@ Close and Apply, the preparation work is done.
 ---
 ### Calculate Monthly Return:
 
-As we know, the formula is **Monthly Return(n)/Monthly Return(n-1) - 1**, so I need previous month value to do this calculation. In SQL, you could easily use LAG function 
+As we know, the formula is **Monthly Return(n)/Monthly Return(n-1) - 1**, so I need previous month value to do this calculation. In SQL, we could easily use LAG function 
 ```
 LAG([Value],1) OVER (PARTITION BY [Product] ORDER BY [Date] DESC)
 ```
@@ -105,7 +105,7 @@ I presented the number in a simple Matrix with product as slicer. (Really unstab
 
 ### Calculate Cumulative Return:
 
-The initial requirement I got from Bank Super-E was they could check N months Cumulative Return of any month they selected. So, it must be a dynamic calculation, my solution is create a measure to do this job.
+The initial requirement I got from Bank Super-E was they could check N months Cumulative Return of any month they selected. So, it must be a dynamic calculation, my solution is creating a measure to do this job.
 
 Based on the formula, I need a function to do iteration of multiplication, and PRODUCTX could handle this type calculation. (Normally a DAX with X as Name End is iteration function, like SUM, SUMX)
 
