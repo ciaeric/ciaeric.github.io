@@ -17,14 +17,14 @@ When you start designing a lot of PowerBI reports, you will meet two questions.
 2. The Matrix, Card ,etc. the frequently used visual, you want to make them consistent looking in every report with your design. But adjusting the format each time when adding them into a new report is really a waste of time.
 
 Microsoft provides "Switch Theme" feature for us to design our own Theme template to solve above questions.
-Actually Microsoft has already provides the [guidance]("https://docs.microsoft.com/en-us/power-bi/desktop-report-themes"), I just want to add some tips and detail example in this post.
+Actually Microsoft has already provides the [guidance](https://docs.microsoft.com/en-us/power-bi/desktop-report-themes), I just want to add some tips and detail example in this post.
 
 
 ---
 
 ### A simple theme with color palette only:
 
-Follow the official [guidance]("https://docs.microsoft.com/en-us/power-bi/desktop-report-themes") to enable the **Custom Report Theme** feature. And then create your own JSON file.
+Follow the official [guidance](https://docs.microsoft.com/en-us/power-bi/desktop-report-themes) to enable the **Custom Report Theme** feature. And then create your own JSON file.
 
 If you know Notepad++, you can directly create a JSON file. 
 If not, simply new a Windows default Text Document
@@ -55,7 +55,7 @@ Then import the JSON file, you will get below theme color.
 
 ![sample](/img/post5/Image1.png)
 
-The official [guidance]("https://docs.microsoft.com/en-us/power-bi/desktop-report-themes") explained above codes
+The official [guidance](https://docs.microsoft.com/en-us/power-bi/desktop-report-themes) explained above codes
 >That JSON file has the following required lines:
 
 >**name** - this is the theme name, which is the only required field
@@ -66,7 +66,7 @@ The official [guidance]("https://docs.microsoft.com/en-us/power-bi/desktop-repor
 
 Tips here are using tools to get Hex Color Code from different sources.
 
-1. Select your own color by using free online tool [**color picker**](https://htmlcolorcodes.com/color-picker/)
+1. Select your own color by using free online tool [**color picker**](https://htmlcolorcodes.com/color-picker)
 
 ![online](/img/post5/Image2.png)
 
@@ -89,7 +89,7 @@ Tips here are using tools to get Hex Color Code from different sources.
 
 >Beginning with the September 2017 release of Power BI Desktop, the JSON file can be much more elaborate. In the JSON file, you only define the formatting that you want to affect, and anything not specified in your JSON file simply reverts to the Power BI default settings.
 
-As official [guidance]("https://docs.microsoft.com/en-us/power-bi/desktop-report-themes") has listed all the properties. I will just give you guys some example as below, which is also the theme I am using.
+As official [guidance](https://docs.microsoft.com/en-us/power-bi/desktop-report-themes) has listed all the properties. I will just give you guys some example as below, which is also the theme I am using.
 
 
 **Slicer**
@@ -131,7 +131,8 @@ As official [guidance]("https://docs.microsoft.com/en-us/power-bi/desktop-report
 ```
 
 **Matrix**
-```"pivotTable": {
+```
+"pivotTable": {
 			"*": {
 				"grid": [{
 					"gridVertical": true,
