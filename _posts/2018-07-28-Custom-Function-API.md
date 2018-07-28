@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Create Custom Function in Power BI
-subtitle:  Practice: Geocoding in Power BI by connecting 3rd party API
+subtitle:  Geocoding in Power BI by connecting 3rd party API
 image: /img/post7/avatar.png
 tags:
   - PowerBI
