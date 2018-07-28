@@ -14,9 +14,9 @@ category: blog
 
 This blog introduces how to create a "custom function" in Power BI, and I am using geocoding in Power BI by connecting 3rd party API as an practice to understand how "custom function" works.
 
-To be honest, I thought if I want to create a powerful custom function, I need to grasp M language at a certain level first to write some codes to do this job, because all the samples I've seen are with many lines M scripts. 
+To be honest, at first beginning I think if I want to create a powerful custom function, I have to grasp M language at a certain level first to do this job, because all the samples I've seen are with many lines M scripts. 
 
-E.g. The function scripts of geocoding using API
+E.g. The M scripts of the function in this blog
 
 ```
 let 
@@ -49,19 +49,19 @@ Why?
 
 ### Scenario:
 
-Normally we directly put address information (country, state, postcode,etc) in to a Power BI Map tile if  the data is **not geocoded in database**. 
+Normally we directly put address fields (country, state, postcode,etc) in to a Power BI Map tile if the data is **not geocoded in database**, and the issues could be
 
 
 - Sometimes the locations on the map are **not correctly** shown up. 
-- And if you have thousands rows of address it might **take very long time**, my guess is the map tile is geocoding the address in background process. 
+- **Take very long time** if you have thousands rows of address, my guess is the map visual is geocoding the address in background process. 
 
-So if we feed Longitude and Latitude to the map visual directly, we will get correct results more efficiently. There are a lot of Geocoding API provider for using, and what we are going do is connecting Geocoding API to geocode directly in Power BI.
+So if we feed Longitude and Latitude to the map visual directly, we will get correct results more efficiently. There are a lot of Geocoding API provider for using, and what we are going do is connecting Geocoding API to retrieve Longitude and Latitude directly in Power BI.
 
 ---
 
 ### Preparation:
 
-I applied a API Key from [MapQuest](https://developer.mapquest.com/) which provides 15,000 free transactions per month. You could also use Google API or any provider you like. 
+I applied an API Key from [MapQuest](https://developer.mapquest.com/) which provides 15,000 free transactions per month. You could also use Google API or any other provider you like. 
 
 ![mapquest](/img/post7/Image2.png)
 
@@ -72,7 +72,7 @@ And I got the Get URL from [Documentation](https://developer.mapquest.com/docume
 http://www.mapquestapi.com/geocoding/v1/address?key=KEY&location=Washington,DC
 ```
 
-The KEY in this URL needs to be replaced later by my own KEY.
+The KEY in this URL needs to be replaced later with my own KEY.
 
 
 ---
@@ -125,7 +125,7 @@ After above transformation, we all know these **transformation steps are recorde
 
 ![key](/img/post7/Image13.png)
 
-I put a address without street number on purpose, as Mapquest sometimes returned more than one result. As we only need one result for one address, we need to record transformation steps of filtering one result.
+I put an address without street number on purpose, as Mapquest sometimes returns more than one result. As we only need one result for one address, we need to record transformation steps of filtering one result.
 
 - Add index column
 
