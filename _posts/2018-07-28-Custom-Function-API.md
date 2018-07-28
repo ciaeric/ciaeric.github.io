@@ -16,27 +16,6 @@ This blog introduces how to create a "custom function" in Power BI, and I am usi
 
 To be honest, at first beginning I think if I want to create a powerful custom function, I have to grasp M language at a certain level first to do this job, because all the samples I've seen are with many lines M scripts. 
 
-E.g. The M scripts of the function in this blog
-
-```
-let 
-	Source = (Location as text) =let
-        Source = Json.Document(Web.Contents("http://www.mapquestapi.com/geocoding/v1/address?key=KEY&location="&Location&"")),
-        results = Source[results],
-        results1 = results{0},
-        locations = results1[locations],
-        #"Converted to Table" = Table.FromList(locations, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
-        #"Expanded Column1" = Table.ExpandRecordColumn(#"Converted to Table", "Column1", {"latLng"}, {"Column1.latLng"}),
-        #"Expanded Column1.latLng" = Table.ExpandRecordColumn(#"Expanded Column1", "Column1.latLng", {"lat", "lng"}, {"Column1.latLng.lat", "Column1.latLng.lng"}),
-        #"Renamed Columns" = Table.RenameColumns(#"Expanded Column1.latLng",{{"Column1.latLng.lat", "Lat"}, {"Column1.latLng.lng", "Lng"}}),
-        #"Added Index" = Table.AddIndexColumn(#"Renamed Columns", "Index", 0, 1),
-        #"Filtered Rows" = Table.SelectRows(#"Added Index", each [Index] = 0)
-    in
-        #"Filtered Rows"
-in 
-Source
-```
-
 After some practice I realized, actually custom function is **not that difficult**. *(Of course, grasping M language might help us generating more powerful Custom Function)*
 
 Why?
