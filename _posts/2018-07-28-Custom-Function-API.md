@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Create Custom Function in Power BI
-subtitle:  Geocoding in Power BI by connecting 3rd party API
+subtitle:  Geocoding in Power BI by connecting API
 image: /img/post7/avatar.png
 tags:
   - PowerBI
@@ -12,7 +12,7 @@ published: true
 category: blog
 ---
 
-This blog introduces how to create a "custom function" in Power BI, and I am using geocoding in Power BI by connecting 3rd party API as an practice to understand how "custom function" works.
+This blog introduces how to create a "custom function" in Power BI, and I am using geocoding in Power BI by connecting API as an practice to understand how "custom function" works.
 
 To be honest, at first beginning I think if I want to create a powerful custom function, I have to grasp M language at a certain level first to do this job, because all the samples I've seen are with many lines M scripts. 
 
