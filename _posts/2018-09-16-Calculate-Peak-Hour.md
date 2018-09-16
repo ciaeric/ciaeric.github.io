@@ -13,7 +13,7 @@ category: blog
 
 I was just recovered from a really bad flu, luckily I got a fun project after recovery and found some new ideas to blog which is s a compensation to me:)
 
-I keep trying to blog solution with real case instead of theories (actually sometime I am not able to explain the theories..lol), so they might use simple method but solve the true problems.
+I keep trying to blog solution with a real case instead of theories (actually sometimes I am not able to explain the theories..lol), so the method might be simple but solves the true problems.
 
 There are two tips about using *GENERATESERIES / CALENDAR* in this project, I am going to introduce the first one in this blog.
 
