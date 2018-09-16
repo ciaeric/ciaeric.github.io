@@ -11,7 +11,7 @@ published: true
 category: blog
 ---
 
-I was just recovered from a really bad flu, luckily I got a fun project after recovery and found some new ideas to blog which I see it as a compensation :)
+I was just recovered from a really bad flu, luckily I got a fun project after recovery and found some new ideas to blog which is s a compensation to me:)
 
 I keep trying to blog solution with real case instead of theories (actually sometime I am not able to explain the theories..lol), so they might use simple method but solve the true problems.
 
