@@ -17,7 +17,7 @@ I won't introduce basic usage of Power BI Parameters here and you could read the
 
 ---
 
-## Always using Parameters to configure your connection details##
+## Always using Parameters to configure your connection details
 
 ### Benefits: 
 
