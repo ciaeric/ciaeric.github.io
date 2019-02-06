@@ -14,7 +14,7 @@ category: blog
 
 Is Power BI a "Self Service" Tool? It depends on how do you define "Self Service" and how much do you know about Power BI.
 
-The reason why I want to write this article is because when I am delivering Power BI development training and communicating with Management Team, I feel like people are misled by the word "Self Service".
+The reason why I want to write this article is that when I am delivering Power BI development training and communicating with Management Team, I feel like people are misled by the word "Self Service".
 
 For example:
 
