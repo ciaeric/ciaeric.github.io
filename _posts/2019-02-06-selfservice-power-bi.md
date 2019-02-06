@@ -1,22 +1,13 @@
-﻿
 ---
-
 layout: post
-
 title: Is Power BI a "Self Service" Tool?
-
 subtitle:  Skills requirements of Power BI development
-
 image: /img/post11/avatar.png
-
 tags:
-
-- PowerBI
+  - PowerBI
 
 published: true
-
 category: blog
-
 ---
 
 ![screenshot1](/img/post11/image1.png)
