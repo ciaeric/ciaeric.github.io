@@ -23,7 +23,7 @@ description: "A personal blog about PowerBI, SQL and more."
 
 # List of links in the navigation bar
 navbar-links:
-  Home: "http://funbiworld.com"
+  Blog: "http://funbiworld.com"
   Tags: "tags"
   About Me: "aboutme"  
 
@@ -111,7 +111,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-#url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "FunBIWorld.com"  
 
 # --- Comments --- #
 
