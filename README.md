@@ -1,1 +1,1 @@
-Theme by Beautiful Jekyll
+Theme by [Beautiful Jekyll](https://deanattali.com/beautiful-jekyll)
