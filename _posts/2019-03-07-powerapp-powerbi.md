@@ -143,7 +143,7 @@ Till now, all the design about functions are all done, you could keep formatting
 
 ### Pop-Up Window
 
-The pop-up window is a trick by using Bookmark Power BI report, now you can go back to Power BI report to add PowerApp visual just like you do in Power BI Service, and you can directly choose the app you just published. Then you need to create two bookmarks, one displays the PowerApp Visual and a Red X image and hides the "New Feedback" button, the other one is completely opposite. And then turn on the action of Rex X image and button, set the action link to the related BookMark. 
+The pop-up window is a trick by using Bookmark Power BI report. Now you can go back to Power BI report to add PowerApp visual just like you do in Power BI Service, and you can directly choose the app you just published. Then you need to create two bookmarks, one displays the PowerApp Visual and a Red X image and hides the "New Feedback" button, the other one is completely opposite. And then turn on the action of Rex X image and button, set the action link to the related BookMark. 
 
 ![screenshot](/img/post12/img29.png)
 
@@ -151,7 +151,7 @@ The pop-up window is a trick by using Bookmark Power BI report, now you can go b
 
 Now, when you click "New Feedback" button, the PowerApp Visual and Red X image will be displayed, the button will be hidden. And when you click the Red X, PowerApp Visual and Red X image will be hidden, the button will be displayed. Easy!
 
-As I said at the first beginning, you can leverage the Power platform to do a lot of fun and cool stuff with Power BI. So keep exploring and hope this step by step instruction will give you some better idea.
+As I said at the first beginning, you can leverage the Power platform to do a lot of fun and cool stuff with Power BI. So keep exploring and I hope this step by step instruction will give you some better idea.
 
 
 Thanks  
