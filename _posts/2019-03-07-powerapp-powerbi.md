@@ -1,7 +1,7 @@
 ---  
 layout: post  
-title: How to make a popup live comments window in Power BI report by integrating PowerApp?  
-subtitle: Power platform makes Power BI more powerful
+title: How to Design a Pop-up Live Comments Window in Power BI Report by Integrating PowerApp?  
+subtitle: Power Platform Makes Power BI more Powerful
 image: /img/post12/avatar.png  
 tags:  
 - PowerBI  
