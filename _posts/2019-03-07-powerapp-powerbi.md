@@ -13,9 +13,9 @@ category: blog
   
 ![screenshot1](/img/post12/indeximg.png)  
 
-Power BI report provides a great interactive experience for the consumers, the missing piece is the end user directly make some input within Power BI report and then the inputs will be reflected in the report, e.g comments of the report or a certain page. **Add a PowerApp as custom visual in Power BI can make this happen**. Please see the sample screenshots I did as below, once you know how to use this method, you can integrate other apps to complete complex tasks, e.g. integrate Microsoft Flow to do Self Service access request to the report based on the approval and O365 actions in **MS Flow** and **Row Level Security** setting in Power BI.
+Power BI report provides a great interactive experience for the consumers, and the missing piece is the end user directly make some input within Power BI report and then the inputs will be reflected in the report, e.g comments of the report or a certain page. **Adding a PowerApp as custom visual in Power BI can make this happen**. Please see the sample screenshots I did as below. Once you know how to use this method, you can integrate other apps to complete complex tasks, e.g. integrate Microsoft Flow to do Self Service access request to the report based on the approval and O365 actions in **MS Flow** and **Row Level Security** in Power BI.
 
-To save the space in that page, I make the PowerApp tile like a "Pop-up" window by using the bookmark feature (I will describe later), so I just put a button in the report banner.
+To save the space in that page, I make the PowerApp tile like a "Pop-up" window by using the bookmark feature (I will describe details later), so I just put a button in the report banner.
 
 ![screenshot](/img/post12/img1.png)  
 
@@ -29,7 +29,7 @@ Okay, now let's see how to design this PowerApp.
 
 ### Prerequisites 
  
- 1. **License**: PowerApp is user based license like Power BI, so you and end users all should have [Power App license](https://powerapps.microsoft.com/en-us/pricing/), only you have standard alone PowerApp license won't work, as the users need a license to "Run" your app.
+ 1. **License**: PowerApp is user based license like Power BI, so you and end users all should have [Power App license](https://powerapps.microsoft.com/en-us/pricing/), only you have stand alone PowerApp license won't work, as the users need a license to "Run" your app.
 2. **Gateway**: If you'd like to directly connect to the SQL Server, then you need to make sure the [Gateway](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/gateway-reference) is correctly setup.
 
 ### PowerApp Design
