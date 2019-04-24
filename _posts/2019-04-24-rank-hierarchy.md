@@ -14,7 +14,7 @@ category: blog
   
 ![screenshot1](/img/post13/index.png)  
 
-If you are familiar with `RANKX` DAX expression, you should know how to do a quick rank measure can be used in a Matrix. 
+If you are familiar with `RANKX` DAX expression, I bet you have already known how to do a quick rank measure can be used in a Matrix. 
 
 ```
 RANKX(ALLSELECTED(ColumnName), CALCULATE(Measure),,DESC,Dense)
