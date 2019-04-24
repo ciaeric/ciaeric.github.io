@@ -26,7 +26,7 @@ In this case as below screenshot, we have two levels Hierarchy in rows and we'd 
 
 ![screenshot](/img/post13/img1.png)  
 
-We know the key concept `Context` of DAX, I introduced it in my other blog [How to Calculate Percentage of Total in Matrix in Power BI](http://funbiworld.com/2018-04-20-How-to-Get-Perctage-of-Total-in-Matrix/). So we will use `ISINSOCPE` to judge what kind of context the measures are under, and use `ALLSELECTED` to restrain the `context` in the iterative calculation.
+We know the key concept `Context` of DAX, I introduced it in my other blog [How to Calculate Percentage of Total in Matrix in Power BI](http://funbiworld.com/2018-04-20-How-to-Get-Perctage-of-Total-in-Matrix/). So we will use `ISINSCOPE` to judge what kind of context the measures are under, and use `ALLSELECTED` to restrain the `context` in the iterative calculation.
 
 ```
 Shop Comm Movement Rank = 
@@ -47,7 +47,7 @@ This works well for this Shop Matrix. You noticed that I put `[Daily Comm]<>BLAN
 ![screenshot](/img/post13/img2.png)  
 
 
-I have another complicated example which is also a Matrix with a dynamic filter(measure), in this case, I need to slice this dynamic filter. (I may introduce how to slice a measure in another blog)
+I have another complicated example which is also a Matrix with a dynamic filter(measure), in this case, I need to slice this dynamic filter. (I may introduce how to dynamically **slice** a measure in another blog)
 
 The filter is like this
 ```
@@ -82,13 +82,12 @@ Consultant Comm Movement Rank = if(
                                     RANKX(ALL(Employee),CALCULATE([Daily Comm]),,DESC,Dense),
                                     BLANK()
                                   )
-
 ```
 It looks fine, but when I sliced the Age Group, the result will be like this, the table is filtered but the Rank calculation is still based on `ALL(Employee)`
 
 ![screenshot](/img/post13/img3.png)  
 
-Then I include this filter into my Rank measure, it works all good. 
+Then I include this filter into my Rank measure, it works all good, the rank number will be recalcualted based on the Age Group. 
 
 ```
 Consultant Comm Movement Rank = if(
