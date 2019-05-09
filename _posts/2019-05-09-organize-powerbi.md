@@ -27,7 +27,7 @@ And I assume you may meet below problems
 * What are the sources and types of all these queries? 
 * ......
 
-I am going to introduce some methods in this blog to keep Power BI report neat which will definitely improve the work efficiency and collaboration in team. The topics include:
+I am going to introduce some methods in this blog to keep Power BI report neat which will definitely improve the work efficiency and collaboration in the team. The topics include:
 1. How to organize measures
 2. How to make the layout more structured
 3. How to manage connections of data sources
@@ -46,11 +46,11 @@ My solution is keeping all the measures in one place and categorize them in diff
 
 The step is quite simple:
 
-Step One - create a table by using "Enter Data" under home tab, give the table name as "#Measures". The "#" makes Measures table always display on the top of the Fields.
+**Step One** - create a table by using "Enter Data" under home tab, give the table name as "#Measures". The `#` makes Measures table always display on the top of the Fields.
 
-Step Two - create measures under this table then delete that defaultly created column, now you have a place for measures only.
+**Step Two** - create measures under this table then delete that default created column, now you have a place for measures only.
 
-Step Three - go to "Model", select/Multi-select measures, set up "Display Folder".Once you have a folder created, you can move measures into the folder by dragging. You can also describer certain measures here if they are complicated which needs explaination. (You can use this method to organize the fields in other normal tables as well)
+**Step Three** - go to "Model", select/Multi-select measures, set up "Display Folder".Once you have a folder created, you can move measures into the folder by dragging. You can also describe certain measures here if they are complicated which needs explanation. (You can use this method to organize the fields in other normal tables as well)
 
 ![screenshot1](/img/post14/measure2.png) 
 
