@@ -123,7 +123,7 @@ staticman:
     # reCaptcha for Staticman (OPTIONAL)
     # If you use reCaptcha, you must also set these parameters in staticman.yml
     siteKey  : "6LcJE6sUAAAAAEuVtipSMwNexYjzOrn-0lqgWcK3" # Use your own site key, you need to apply for one on Google
-    secret   : "6LcJE6sUAAAAAKaUVwcQEdEcWmRwgc46Lss9pzwJ" # ENCRYPT your password by going to https://staticman3.herokuapp.com/v3/encrypt/<your-site-secret>
+    secret   : "m/s4AiGCEDAbJVOA5VN8XSD/xsQwBz182NV69Q0Smh9XLaNmBcxa/0w8JpOPTFgPTGZbhIqqIrKOo3Go3dSWn3IElcXQJq37cwsHavnETBNNKzPTOioeX6XPoPP8qfUmOvSk0/hCVo6TLkxmt+Qd8YNv8NtZF9P4u9erP0SbDTN9gLBynh36IHyAONdKnHwduJtkXeqGj7P1uq0eUmwtsTCj6mieN4vknHiMzTezEYsCxl5aPck/pIiDMmx6PN/yRMcAZ5sAbqCjXNG/jeIffmRhXCJpVsNd7iRBCiqemOiEF6JJ2T/hHa4sFGDUNuVYm5ByF+5xBHdiglsET2nimA==" # ENCRYPT your password by going to https://staticman3.herokuapp.com/v3/encrypt/<your-site-secret>
 
 # --- Misc --- #
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
