@@ -22,7 +22,7 @@ I moved to Australia from the China Mainland in 2015. Currently I am living in B
 - Dashboarding: `Power BI`, `Oracle Hyperion`, `Periscope Data`
 
 ### <i class="fa fa-suitcase" aria-hidden="true"></i> Career  
-Currently I work at <i class="fa fa-sun-o" aria-hidden="true"></i> [**Bolton Clarke**](https://www.boltonclarke.com.au) - as a Business Intelligence Specialist. 
+Currently I work at <i class="fa fa-plane" aria-hidden="true"></i> [**FlightCentre**](http://www.fctgl.com/) - as a Senior Business Intelligence Analyst. 
 I used to work at <i class="fa fa-building" aria-hidden="true"></i> [**IBM China**](https://www.ibm.com) for 7 years in different roles, the last position as a management consultant in the CRM domain. After I moved to Australia, I shifted my career path to the technical side with a focus on Business Intelligence, the year I spent with <i class="fa fa-plane" aria-hidden="true"></i> [**FlightCentre**](http://www.fctgl.com/) made me feel excited to be working in this field. 
 
 ### <i class="fa fa-heart" aria-hidden="true"></i> Hobby
