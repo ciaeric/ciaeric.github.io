@@ -39,7 +39,7 @@ We create a single date slicer table, keep the dim_date table to do other time i
 
 Now, let's move to the cohort chart, the material we have is a fact table like below
 
-![screenshot1](/img/post17/cust.png)  
+![screenshot1](/img/post17/custtable.png)  
 
 As we said as the beginning, we would like users to slide the date slicer bar to see any period as they want. We can't just generate a calculated table to prepare the data for customer retentions as the calculation happened before the slice. We will need one measure to solve everything.
 
