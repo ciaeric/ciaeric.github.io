@@ -2,7 +2,7 @@
 layout: page
 permalink: "aboutme"
 title: About me
-bigimg: '/assets/img/pandaironman.jpg'
+cover-img: '/assets/img/pandaironman.jpg'
 
 ---
 
