@@ -2,7 +2,7 @@
 layout: post
 title: How to Draw an Australia Map with Label in Power BI 
 subtitle: All the steps by using R
-image: /img/post1/aumapsquare.jpg
+image: assets/img/post1/aumapsquare.jpg
 tags:
   - R
   - Power BI
@@ -34,16 +34,16 @@ You can also consolidate an Australia map based on [data.gov.au](https://data.go
 #### What I did are
 
 - **Click the third link to get JSON file**
-![Download JSON file from data.gov.au](/img/post1/l2.png)
-![JSON file](/img/post1/l3.png)
+![Download JSON file from data.gov.au](assets/img/post1/l2.png)
+![JSON file](assets/img/post1/l3.png)
 - **Convert JSON to CSV**  
 I used an [online conversion tool](https://json-csv.com/) to do the job, just easily copy and paste.
 
 - **Merge the file**  
 Copy Column F and G to `Ozdata` Long and Lat column, keep the same order as you download the converted file
-![Merge in Excel](/img/post1/l4.png)
+![Merge in Excel](assets/img/post1/l4.png)
 Fill **group** column with `8`; fill **order** column from `1` to the end of this group; fill **region** as `ACT`; fill **border** as `ACT.NSW`
-![Fill Result](/img/post1/l5.png)   
+![Fill Result](assets/img/post1/l5.png)   
 Till this step, I generated a complete **Australian state/coast boundaries data**.
 
 - **Test in R-studio**  
@@ -51,7 +51,7 @@ Till this step, I generated a complete **Australian state/coast boundaries data*
 >library("ggplot2")
 >ggplot()+geom_polygon(data=ozdata_with_ACT,aes(x=long,y=lat,group=group,fill=region))
 ```  
-![Map in R Studio](/img/post1/l6.png)  
+![Map in R Studio](assets/img/post1/l6.png)  
 Don’t have `ggplot2` library? Just type `install.packages(“ggplot2”)` in R-studio
 
 ---
@@ -61,7 +61,7 @@ Don’t have `ggplot2` library? Just type `install.packages(“ggplot2”)` in R
 The logic of labelling the map is overlaying two layers. If we want to overlay a label to map, we need get one position in each state which is the coordinates (long,lat), so we need create a csv file and upload to Power BI as below screenshot. 
 
 I slightly changed the long and lat for ACT, NSW and VIC, because they are very close and the labels will be overlaid by each other.  
-![coordinates](/img/post1/l7.png)  
+![coordinates](assets/img/post1/l7.png)  
 **Then, all the external data are ready!**
 
 ---
@@ -76,15 +76,15 @@ MapNumber = SUMMARIZE('Member Detail','Member Detail'[State Name],"Members",sum(
 ---
 
 ### Step 4: Build up relationship between datasets
-![Relationship](/img/post1/l8.png)
+![Relationship](assets/img/post1/l8.png)
 
 ---
 
 ### Step 5: Start your R coding journey
 
 Insert R tile in Power BI, and select the data we need  
-![datafiled](/img/post1/l9.png)
-![R editor](/img/post1/l10.png)
+![datafiled](assets/img/post1/l9.png)
+![R editor](assets/img/post1/l10.png)
 
 **Coding in R script editor**
 ```R
@@ -120,7 +120,7 @@ ggplot()+geom_polygon(data=new,aes(x=long,y=lat,group=group,fill=Members), colou
  )+    labs(x=NULL, y=NULL) +  theme(axis.ticks = element_blank()) + theme(axis.text = element_blank())+ guides(fill=FALSE)
 ```
 Then I got this, the problem is I can hardly tell the difference between states except QLD from the color  
-![map1](/img/post1/l12.png)
+![map1](assets/img/post1/l12.png)
 
 What I did is to modify the map layer as
 
@@ -129,7 +129,7 @@ ggplot()+geom_polygon(data=new,aes(x=long,y=lat,group=group,fill=log(Members)), 
 ```
 
 Let’s have a look at the final output.  
-![Finalmap](/img/post1/l13.png)
+![Finalmap](assets/img/post1/l13.png)
 
 Have Fun!
 
