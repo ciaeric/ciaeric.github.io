@@ -1,7 +1,0 @@
-_id: 1cbb5760-4d55-11ea-9599-bf636cfe010c
-message: "Hey Eric\r\nLooks good. Question on the entry at July 31, 2016 for \"Good Money's\" cumulative investment rate. Why is it showing 12.36%? Shouldn't that value be null, as we are just starting the investment?\r\n\r\nFrom July 31, 2016 to Sept 30, 2016, the value changes from 3.01 to 3.88, that's 3.88/3.01 or a 28.9% return.  The Investment Rate column is showing 10.24.\r\n\r\nIt's due to the starting 12.36% that is appearing from somewhere.\r\n\r\nDid you ever get that resolved?\r\nI'm working on a similar project and having difficulties making it work.\r\n\r\nYour solution was brilliant.  Just wondering how to eliminate slight bug.\r\nThanks!"
-name: Kevin
-email: c2b08183e7466c35057dfc3b537bd877
-url: ''
-hidden: ''
-date: '2020-02-12T05:04:14.251Z'
