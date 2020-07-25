@@ -2,7 +2,7 @@
 layout: post
 title: How to Draw an Australia Map with Label in Power BI 
 subtitle: All the steps by using R
-image: /assets/img/post1/aumapsquare.jpg
+thumbnail-img: /assets/img/post1/aumapsquare.jpg
 tags:
   - R
   - Power BI
