@@ -2,7 +2,7 @@
 layout: post  
 title: Dynamic Cohort Analysis in Power BI  
 subtitle: Replicate chart from Google Analytics
-image: /img/post17/avatar.png  
+thumbnail-img: /assets/img/post17/avatar.png  
 tags:  
 - PowerBI  
 - Google Analytics
@@ -14,14 +14,14 @@ published: true
 category: blog  
 ---  
   
-![screenshot1](/img/post17/index.png)  
+![screenshot1](/assets/img/post17/index.png)  
 
 For a non-target promotion campaign, like "Black Friday", the campaign period is kind of flexible. A Power BI report should be able to provide a flexible experience to users that they can select any period they like to check the campaign performance. So the dynamic calculations are essential for this report based on the start date and end date which the users selected.
 
 And we know we can use customer retention metrics to measure the success of a campaign. Also, if you are familiar with Google Analytics, you must know below cohort chart which indicate the users' retention. 
 
 Example:
-![screenshot1](/img/post17/ga.png)  
+![screenshot1](/assets/img/post17/ga.png)  
 
 What I am going to do is replicating this cohort analysis chart into Power BI and as I said at the beginning we need to make it a dynamic to achieve best user experience, which means a static calculated table won't do the job as other tutorials introduced.
 
@@ -33,13 +33,13 @@ We can use data slicer as a table like to fact table as we usually do, and then 
 
 We create a single date slicer table, keep the dim_date table to do other time intelligence calculation.
 
-![screenshot1](/img/post17/dateslicer.png)  
+![screenshot1](/assets/img/post17/dateslicer.png)  
 
 ### 2. Prepare for the Cohort analysis
 
 Now, let's move to the cohort chart, the material we have is a fact table like below
 
-![screenshot1](/img/post17/custtable.png)  
+![screenshot1](/assets/img/post17/custtable.png)  
 
 As we said as the beginning, we would like users to slide the date slicer bar to see any period as they want. We can't just generate a calculated table to prepare the data for customer retentions as the calculation happened before the slice. We will need one measure to solve everything.
 
@@ -50,21 +50,21 @@ Let's see the logic:
 
 So, we need two dimensions in this chart for group 1 and group 2 customers. Because the campaign date range is not fixed and the dimensions have to be fixed, we need a certain way to make it relatively fixed and be involved in the calculations. My idea is using the number of days after the campaign. We need two dimensions like below
 
-![screenshot1](/img/post17/axis.png)  
+![screenshot1](/assets/img/post17/axis.png)  
 
 add a ranking index for sorting
 
-![screenshot1](/img/post17/ranking.png)  
+![screenshot1](/assets/img/post17/ranking.png)  
 
-![screenshot1](/img/post17/sort.png)  
+![screenshot1](/assets/img/post17/sort.png)  
 
 replicate table to create the second dimension
 
-![screenshot1](/img/post17/table2.png)  
+![screenshot1](/assets/img/post17/table2.png)  
 
 ### 3. Build the Cohort table
 
-![screenshot1](/img/post17/cohort.png)  
+![screenshot1](/assets/img/post17/cohort.png)  
 
 A table can help us to verify the logic and the accuracy of numbers. 
 The method is 
@@ -118,7 +118,7 @@ FILTER(ALL(Fact_Customers), Fact_Customers[BookingDate]>date5 &&Fact_Customers[B
 
 this measure has been tuned a couple of times as the first version took more than 10 seconds to run, and now I am happy with the performance.  
 
-![screenshot1](/img/post17/caltime.png) 
+![screenshot1](/assets/img/post17/caltime.png) 
 
 ### 4. Build the Cohort chart
 
@@ -201,11 +201,11 @@ FILTER(ALL(Fact_Customers), Fact_Customers[BookingDate]>date5 &&Fact_Customers[B
 )
 ```
 
-![screenshot1](/img/post17/condition.png)  
+![screenshot1](/assets/img/post17/condition.png)  
 
 Okay, now you can play with it by sliding the bar, looks pretty cool, right? :)
 
-![screenshot1](/img/post17/index.png)  
+![screenshot1](/assets/img/post17/index.png)  
 
 
 

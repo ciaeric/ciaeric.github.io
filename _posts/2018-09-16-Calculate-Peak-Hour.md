@@ -2,7 +2,7 @@
 layout: post
 title: How to Make Peak Time Analysis based on Records with Start Time and End Time
 subtitle:  Tips of using GENERATESERIES
-image: /img/post8/avatar.png
+thumbnail-img: /assets/img/post8/avatar.png
 tags:
   - PowerBI
   - Interval
@@ -24,7 +24,7 @@ There is one roster about each nurse's shift with a start time and a finish time
 
 The idea output is like below screenshot
 
-![screenshot](/img/post8/Image1.png)
+![screenshot](/assets/img/post8/Image1.png)
 
 ---
 
@@ -34,7 +34,7 @@ Firstly we need to prepare a time table with 30 minutes interval which will used
 
 Create a calculated Table by using [GENERATESERIES](https://msdn.microsoft.com/en-us/query-bi/dax/generateseries-function)
 
-![GENERATESERIES](/img/post8/Image2.png)
+![GENERATESERIES](/assets/img/post8/Image2.png)
 
 ```
 TimeTable = GENERATESERIES(TIMEVALUE("00:00"),TIMEVALUE("23:59"),TIME(0,30,0))
@@ -42,7 +42,7 @@ TimeTable = GENERATESERIES(TIMEVALUE("00:00"),TIMEVALUE("23:59"),TIME(0,30,0))
 
 Then, we will see a time table like this
 
-![screenshot2](/img/post8/Image3.png)
+![screenshot2](/assets/img/post8/Image3.png)
 
 Create two measures under this table
 
@@ -56,7 +56,7 @@ Mintime = MIN(TimeTable[Value])
 
 Secondly, let's check the roster data
 
-![screenshot3](/img/post8/Image4.png)
+![screenshot3](/assets/img/post8/Image4.png)
 
 Apparently, we can't use starttime and finishtime directly, because we need compare with time only without date.
 
@@ -70,7 +70,7 @@ Starttime_timeonly = FORMAT(Roster[Start_Time],"hh:mm:ss")
 Finishtime_timeonly = FORMAT(Roster[Finish_Time],"hh:mm:ss")
 ```
 
-![screenshot4](/img/post8/Image5.png)
+![screenshot4](/assets/img/post8/Image5.png)
 
 Till now, all the preparation work is done. We just need one Measure to calculate what we want, in this case we would like to know how many nurses are rostered in each 30 minutes per day.
 
@@ -86,19 +86,19 @@ Now that's create the chart, please remember that there is no relationship neede
 
 Drag the [Value] from Timetable to Axis, and the measure just created to the Value
 
-![screenshot5](/img/post8/Image6.png)
+![screenshot5](/assets/img/post8/Image6.png)
 
 The output is exact same as we expected.
 
-![screenshot6](/img/post8/Image8.png)
+![screenshot6](/assets/img/post8/Image8.png)
 
 We could also change the Type of Axis to be exact the same as first screenshot at the beginning of this blog
 
-![screenshot7](/img/post8/Image7.png)
+![screenshot7](/assets/img/post8/Image7.png)
 
 To make a comparison between Roster and Actual shift, I created a separate measure based on the same method as above with "ActualShift" table. And I personally prefer Area chart to present this type of analysis, so the final result is as below which completely show us what happened per day.
 
-![screenshot8](/img/post8/Image9.png)
+![screenshot8](/assets/img/post8/Image9.png)
 
 Have Fun~
 

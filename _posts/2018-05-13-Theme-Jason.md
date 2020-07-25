@@ -2,7 +2,7 @@
 layout: post
 title: How to Setup Your Own Theme of PowerBI Reports
 subtitle: Tips and Examples of creating JSON File
-image: /img/post5/avatar.png
+thumbnail-img: /assets/img/post5/avatar.png
 tags:
   - PowerBI
   - Theme
@@ -53,7 +53,7 @@ Save the file, if it's a Text Document, change the extension name from **.txt** 
 
 Then import the JSON file, you will get below theme color.
 
-![sample](/img/post5/Image1.png)
+![sample](/assets/img/post5/Image1.png)
 
 The official [guidance](https://docs.microsoft.com/en-us/power-bi/desktop-report-themes) explained above codes
 >That JSON file has the following required lines:
@@ -68,17 +68,17 @@ Tips here are using tools to get Hex Color Code from different sources.
 
 1. Select your own color by using free online tool [**color picker**](https://htmlcolorcodes.com/color-picker)
 
-![online](/img/post5/Image2.png)
+![online](/assets/img/post5/Image2.png)
 
 2. The color palette is only a picture. Then use free tool [**PicPick**](http://ngwin.com/picpick) to get the Hex Color Code
 
 -Select "Color Picker" tool
 
-![picker](/img/post5/Image3.png)
+![picker](/assets/img/post5/Image3.png)
 
 -Mouse over the part in the picture with the color you want, then click, you will get below color palette with Hex Color Code
 
-![code](/img/post5/Image4.png)
+![code](/assets/img/post5/Image4.png)
 
 3. If you have RBG color code, you could also use above PicPick to get Hex Color Code.
 

@@ -2,7 +2,7 @@
 layout: post
 title: How to Pass Multiple-Values Parameters to SQL Statement
 subtitle:  to Design a Dynamic Power BI Report
-image: /img/post2/avatar.png
+thumbnail-img: /assets/img/post2/avatar.png
 tags:
   - Power BI
   - SQL
@@ -63,18 +63,18 @@ GROUP BY ID
 ```
 
 The final output should be like this,then load data to Power BI  
-![outputable](/img/post2/p20.png)
+![outputable](/assets/img/post2/p20.png)
 
 ---
 
 ### Step 2
 
 In Query Editor, right click `Selection` column, select `Add as New Query`  
-![Addnewquery](/img/post2/p21.png)
+![Addnewquery](/assets/img/post2/p21.png)
 
 Create New Parameter, set a name, Type as Text, Suggested value as `Query`, select the query just created in last step, manually put one `customerid` as current value.  
-![newpara](/img/post2/p22.png)
-![para](/img/post2/p23.png)
+![newpara](/assets/img/post2/p22.png)
+![para](/assets/img/post2/p23.png)
 
 ---
 
@@ -108,7 +108,7 @@ One requirement here I listed at first beginning is
 >I have super complex queries (with if else, temp table,index,etc inside). After I modified M scripts, I >should still be able to edit my SQL queries easily for further possible update..
 
 After importing data with SQL statement, when opening the “Advanced Editor”, I will get something like below, if I modified this M scripts (passing parameter directly), I can’t click the source to edit SQL statement anymore, of course, I can “View Native Query”, but it’s extremely hard to edit a complex SQL statement in M, because it's in one line with line feed , tab, all these annoying characters.  
-![m](/img/post2/p24.png)
+![m](/assets/img/post2/p24.png)
 
 So, what we need to use is **Value.NativeQuery**, and the MVP is as below
 ```

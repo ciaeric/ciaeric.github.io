@@ -2,7 +2,7 @@
 layout: post
 title: How to Write A Conditional Measure Linked with Slicer
 subtitle:  a rolling up model
-image: /img/post6/avatar.png
+thumbnail-img: /assets/img/post6/avatar.png
 tags:
   - PowerBI
   - Measure
@@ -33,9 +33,9 @@ I drafted sample table as below
 
 2. An already aggregated table from transaction table (the real case could have more categories or different fields)
 
-![modelsample1](/img/post6/post6-1.png)
+![modelsample1](/assets/img/post6/post6-1.png)
 
-![modelsample2](/img/post6/post6-2.png)
+![modelsample2](/assets/img/post6/post6-2.png)
 
 ---
 
@@ -65,7 +65,7 @@ KEY = Detail[Quarter]&Detail[CustomerID]
 ```
 Then I build up below model to figure out the **“Rolling up”** requirement, we could attach more data to the KEY to roll up the number per customer level. Please do remember to check the link direction, as we are going to use the filter from left to right. If you have better solution, please do let me know.
 
-![modelsample3](/img/post6/post6-3.png)
+![modelsample3](/assets/img/post6/post6-3.png)
 
 ### Calculation:
 
@@ -84,14 +84,14 @@ CustomerCount = DISTINCTCOUNT(Detail[CustomerID])
 
 3. add a matrix as below
 
-![matrix](/img/post6/post6-4.png)
-![matrix](/img/post6/post6-5.png)
+![matrix](/assets/img/post6/post6-4.png)
+![matrix](/assets/img/post6/post6-5.png)
 
 Then let’s test the number, Customer Count is 4 which is obviously correct.
 
 I create a matrix purely from Detail table like this
 
-![matrix2](/img/post6/post6-6.png)
+![matrix2](/assets/img/post6/post6-6.png)
 
 Then we could tell the Deposit is correct, as the some Customers have account in other subsidiary as well. But Admin fee is **incorrect**, because the amount is also rolling up, and based on the requirements they would like see the admin fee **per subsidiary only**.
 
@@ -106,7 +106,7 @@ The key part is **FILTER(Detail,Detail[Child] in VALUES('Hierarchy'[Child]))**, 
 
 Now, we get the right number and have fun.
 
-![matrix2](/img/post6/post6-7.png)
+![matrix2](/assets/img/post6/post6-7.png)
 
 Thanks
 Eric Dong

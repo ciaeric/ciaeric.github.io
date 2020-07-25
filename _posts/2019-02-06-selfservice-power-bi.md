@@ -2,7 +2,7 @@
 layout: post
 title: Is Power BI a "Self Service" Tool?
 subtitle:  Skills requirements of Power BI development
-image: /img/post11/avatar.png
+thumbnail-img: /assets/img/post11/avatar.png
 tags:
   - PowerBI
 
@@ -10,7 +10,7 @@ published: true
 category: blog
 ---
 
-![screenshot1](/img/post11/image1.png)
+![screenshot1](/assets/img/post11/image1.png)
 
 Is Power BI a "Self Service" Tool? It depends on how do you define "Self Service" and how much do you know about Power BI.
 
@@ -30,13 +30,13 @@ My understanding of "Self Service" Power BI includes two parts: One is more from
 
 When I draft the first version of training deck, I put below content in it on purpose. It seems like to clarify BI's responsibility, but my idea is to show that there are lots of skills needed to develop a Power BI report if they like to use data from source system or a data warehouse
 
-![screenshot1](/img/post11/image2.png)
+![screenshot1](/assets/img/post11/image2.png)
 
 ---
 
 Then, I developed a new chart to explain my thought in a more structured way as below which I would like to share with you. I am always trying to provide a solution instead of report, that's my goal to achieve the best outcome. And till today I can't even say I am a DAX expert or a Power Query expert, so Power BI is not as easy as a "Self Service" Macdonald Order Machine.
 
-![screenshot1](/img/post11/image3.png)
+![screenshot1](/assets/img/post11/image3.png)
 
 Do I support Analysts in field to do their own report to make in-depth analysis? I strongly encourage them to use DAX to do that. But the thing is Tabular model is the foundation knowledge of DAX, analysts need to understand the relationship between tables and how DAX works with them, because per official definition - The Data Analysis expressions (DAX) language provides a specialized syntax for querying Analysis Services tabular model. *DAX is NOT a programming language. DAX is primarily a formula language and is also a query language.*
 

@@ -2,7 +2,7 @@
 layout: post
 title: How to Make Date Slicers for a Certain Days Cycle 
 subtitle:  Tips of using CALENDAR
-image: /img/post9/avatar.png
+thumbnail-img: /assets/img/post9/avatar.png
 tags:
   - PowerBI
   - Cycle
@@ -64,7 +64,7 @@ ADDCOLUMNS(CALENDAR(max(RosterOn_CurrentRosterCycle[NWstartdate])-6*28,MAX(Roste
 
 Then, we will see a date table like this
 
-![screenshot2](/img/post9/Image1.png)
+![screenshot2](/assets/img/post9/Image1.png)
 
 How do we cut these dates table based on 28 days? My method is using Index and Mod, if you have better way, please let me know.
 
@@ -102,14 +102,14 @@ CycleKey = RosterOn_Cycle[Category]&RosterOn_Cycle[Subcategory]&RosterOn_Cycle[D
 
 Now we can see the table and model like below 
 
-![screenshot2](/img/post9/Image2.png)
+![screenshot2](/assets/img/post9/Image2.png)
 
-![screenshot2](/img/post9/Image3.png)
+![screenshot2](/assets/img/post9/Image3.png)
 
 
 Finally, add roster cycle and region slicers, all done!
 
-![screenshot2](/img/post9/Image5.png)
+![screenshot2](/assets/img/post9/Image5.png)
 
 Recently, I was using Microsoft Flow to integrate Sentiment Analysis API and MS forms to feed data to Power BI and calling Power BI API to refresh dataset, which are very exciting solutions, I might blog them in the future. 
 

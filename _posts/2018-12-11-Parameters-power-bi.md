@@ -2,7 +2,7 @@
 layout: post
 title: Best Practice and Advanced Usage of Parameters in Power BI 
 subtitle:  Interacting with SQL Server
-image: /img/post10/avatar.png
+thumbnail-img: /assets/img/post10/avatar.png
 tags:
   - PowerBI
   - Parameter
@@ -31,15 +31,15 @@ I won't introduce basic usage of Power BI Parameters here and you could read the
 
 Before connecting to/importing data from SQL Server, open Power Query Editor and create server/database parameters over there. You could use `Any Value` for free input,`List of Values` for selection or `Query` from other queries. In this case, I am using `List of Values` then I could directly select the value from the drop-down list later when switching the data source.
 
-![screenshot1](/img/post10/image2.png)
+![screenshot1](/assets/img/post10/image2.png)
 
 Connect to SQL Server, change to Parameters Option, then select the Parameters from the drop-down list next to it.
 
-![screenshot2](/img/post10/image3.png)
+![screenshot2](/assets/img/post10/image3.png)
 
 If you have more than one servers or databases, or a different type of connections, you could create a bunch of parameters to manage them. Below screenshot is a sample about parameters in Power BI Service after you published the dataset, you could directly update the value of parameters from there instead of update your PBIX file and publish again.
 
-![screenshot3](/img/post10/image4.png)
+![screenshot3](/assets/img/post10/image4.png)
 
 
 ## Use your Parameterized SQL Query directly in Power BI:

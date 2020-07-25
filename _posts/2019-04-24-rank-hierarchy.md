@@ -2,7 +2,7 @@
 layout: post  
 title: How to Create a Dynamic Rank in Matrix with Hierarchy?  
 subtitle: Tips for using RANKX and ISINSCOPE
-image: /img/post13/avatar.png  
+thumbnail-img: /assets/img/post13/avatar.png  
 tags:  
 - PowerBI  
 - RANKX
@@ -12,7 +12,7 @@ published: true
 category: blog  
 ---  
   
-![screenshot1](/img/post13/index.png)  
+![screenshot1](/assets/img/post13/index.png)  
 
 If you are familiar with `RANKX` DAX expression, I bet you have already known how to do a quick rank measure can be used in a Matrix. 
 
@@ -24,7 +24,7 @@ Now we have a Matrix with Hierarchy in Rows, and we would like our ranking dynam
 
 In this case as below screenshot, we have two levels Hierarchy in rows and we'd like user can switch between Location(parent level of shops) view and shop view, and we hope our Rank measures can work when users do this switch by clicking `Go to the next level in the hierarchy` and `Drill Up`.
 
-![screenshot](/img/post13/img1.png)  
+![screenshot](/assets/img/post13/img1.png)  
 
 We know the key concept `Context` of DAX, I introduced it in my other blog [How to Calculate Percentage of Total in Matrix in Power BI](http://funbiworld.com/2018-04-20-How-to-Get-Perctage-of-Total-in-Matrix/). So we will use `ISINSCOPE` to judge what kind of context the measures are under, and use `ALLSELECTED` to restrain the `context` in the iterative calculation.
 
@@ -44,7 +44,7 @@ SWITCH(TRUE(),
 
 This works well for this Shop Matrix. You noticed that I put `[Daily Comm]<>BLANK()` in my conditions and you may say "why don't you just filter it as `IS NOT BLANK` in FILTERS?". Because once you filter value on this Matrix, the Rank Measure will not work anymore. (I struggled a lot before I realized this). My understanding is the dynamic filter(measure) will break the `ALLSELETECD` somehow. 
 
-![screenshot](/img/post13/img2.png)  
+![screenshot](/assets/img/post13/img2.png)  
 
 
 I have another complicated example which is also a Matrix with a dynamic filter(measure), in this case, I need to slice this dynamic filter. (I may introduce how to dynamically **slice** a measure in another blog)
@@ -85,7 +85,7 @@ Consultant Comm Movement Rank = if(
 ```
 It looks fine, but when I sliced the Age Group, the result will be like this, the table is filtered but the Rank calculation is still based on `ALL(Employee)`
 
-![screenshot](/img/post13/img3.png)  
+![screenshot](/assets/img/post13/img3.png)  
 
 Then I include this filter into my Rank measure, it works all good, the rank number will be recalcualted based on the Age Group. 
 

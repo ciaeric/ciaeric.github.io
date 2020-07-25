@@ -2,7 +2,7 @@
 layout: post
 title: How to Calculate Percentage of Total in Matrix in Power BI
 subtitle:  row and column groups from different tables
-image: /img/post3/avatar.png
+thumbnail-img: /assets/img/post3/avatar.png
 tags:
   - PowerBI
   - SQL
@@ -35,7 +35,7 @@ The key concept is "context", when we put a measure in a Matrix, the column grou
 
 ### Calculation:
 I created a simple model with sales data and date as below ,(in real life, could be multi-tables connected with sales rep table)
-![modelsample](/img/post3/post3-1.PNG)
+![modelsample](/assets/img/post3/post3-1.PNG)
 
 If we would like to calculate sales number percentage of total by sales rep, we create a measure with the DAX expression like this 
 ```
@@ -45,10 +45,10 @@ PercentageofTotal =
 		,ALLEXCEPT(Sales,Sales[Sales ID]))
 ```
 We get the right result, the logic is the measure ingored `Car Type` context but preserved `Sales ID` to calculate the total sales number.
-![firstresult](/img/post3/post3-2.PNG)
+![firstresult](/assets/img/post3/post3-2.PNG)
 
 Of course, we would like show Sales Name instead of ID, so we will drag `Sales Rep Name` from Sales Rep table to the `Columns` in matrix, then the result turn to be like this.
-![wrongresult](/img/post3/post3-3.PNG)
+![wrongresult](/assets/img/post3/post3-3.PNG)
 
 Apparently, this is incorrect. Though there is relationship between these two tables, the context of `Column` is not correctly set. 
 So, we need to fix the context by adding one more filter:
@@ -59,7 +59,7 @@ PercentageofTotal =
 			ALLEXCEPT(sales,Sales[Sales ID]),
 			Sales[Sales ID] in VALUES('Sales Rep'[Sales ID]))
 ```
-![finalresult](/img/post3/post3-4.PNG)
+![finalresult](/assets/img/post3/post3-4.PNG)
 
 Now, we get the correct result. It's just a small tip, hope you guys enjoy it. 
 
