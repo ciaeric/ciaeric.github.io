@@ -23,7 +23,7 @@ Power BI External Tools Tab
 ![screenshot1](/assets/img/post18/tools.png)
 
 Tabular Editor
-![screenshot1](/assets/img/post18/tools.png)
+![screenshot1](/assets/img/post18/tabular.png)
 
 Now what we need to do is creating a calculation group. Calculation Group is a very powerful function helping save tons of time to create redundancy measures, for example, you have measure like Bookings, Conversion Rate, and you also need apply time intelligence on top of them like YTD, MTD. Of course, you can use a switch to do the similar calculation, but you will need to define all those measures in a switch measure first. By using calculation group, you don't need to do that, just simply created.
 
@@ -43,29 +43,29 @@ There is one thing you will be aware of, once you add "measure name" as slicers 
 
 ### 1. Create a Calculation Group
 
-![screenshot1](/assets/img/post17/group.png)
+![screenshot1](/assets/img/post18/group.png)
 
 ### 2. Create a Calculation Item
 
 You will realize that there is "Name" column automated generated, you will use it as the slicer to switch between Calculation Items.
 
-![screenshot1](/assets/img/post17/item.png)
+![screenshot1](/assets/img/post18/item.png)
 
 Because I know that I can use this to overwrite the existing measures in Power BI dataset, I made below dax to do my job. Within that the switch formula handles the legend/category in line chart, and using ISSELECTEDMEASURE() to do a conditional switch calculation based on the measure I used for different visuals.
 
-![screenshot1](/assets/img/post17/dax.png)
+![screenshot1](/assets/img/post18/dax.png)
 
 ### 3. Create Measures in Power BI
 
 In Power BI, create related measure names used in the dax, and put a SELECTEDMEASURE() in it. Don't worry, the calculation group will overwrite them. Use "Name" column as Slicer.
 
-![screenshot1](/assets/img/post17/visual.png)
+![screenshot1](/assets/img/post18/visual.png)
 
 ### 4. Change the format of Calculation Item
 
 Update the properties "Format String Expression" of each Calculation Item, I think you can go further to make this in dax or make a reference table to make it dynamic as well. But I am just simply update it here. Till now, each Calculation Item has had their format and can be sliced in Power BI report like below chart.
 
-![screenshot1](/assets/img/post17/switchmeasure.gif)
+![screenshot1](/assets/img/post18/switchmeasure.gif)
 
 Have Fun.
 
