@@ -2,6 +2,7 @@
 layout: post
 title: Visualize Complex Hierarchy and Slice with Any Node
 subtitle: Data Modelling and Custom Visual
+share-img: /assets/img/post19/socialshare.png
 thumbnail-img: /assets/img/post19/avatar.png
 tags:
 - PowerBI
