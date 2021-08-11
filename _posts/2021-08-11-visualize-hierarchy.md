@@ -102,7 +102,7 @@ FROM pathall pl
 
 ![screenshot1](/assets/img/post19/dummy2.png)
 
-Because the need is "search" any Node in the hierarchy, so we need another dimension table to lookup `Dim_Path` and served as a slicer, I am writing another similar SQL code to get it (no pivot calculation), actually you can unpivot previous table in Power Query to achieve the same result
+Because the need is "search" any Node in the hierarchy, so we need another dimension table to lookup/filter `Dim_Path` and served as a slicer, I am writing another similar SQL code to get it (no pivot calculation), actually you can unpivot previous table in Power Query to achieve the same result
 ```
 WITH pathstring
 AS (SELECT distinct
@@ -161,15 +161,15 @@ Then create a slicer using the `name` value of `Dim_Path_Search` table.
 
 ### Now, let's play. 
 
-Once you select a node in the [name] slicer, you will get all the related paths with it, which includes all its children and consolidate back to the ultimate parent. You can click any node to expand to next level. Another good part of this visual is it provides contribution % and data bar as well.
+Once you select a node in the [name] slicer, you will get all the related paths with it, which includes all its children and consolidate back to the ultimate parent. You can click any node to expand to the next level. Another good part of this visual is it provides contribution % and data bar.
 
 ![screenshot1](/assets/img/post19/dummy4.png)
 
-There is one more feature is it has a built in "Search" feature. If after the [name] slice, we will have a relatively bigger tree, you can use this feature to narrow down and find that specific path.
+There is one more feature is a built in "Search". If after filter the [name], we still have a relatively bigger tree, you can use this feature to narrow down and find the specific path.
 
 ![screenshot1](/assets/img/post19/dummy5.png)
 
-There are many configurations you can try. But the to get rid of the pop up ads in Power BI service, you have to pay for it. 
+There are many configurations you can try. But there is one drawback is to get rid of the pop up ads in Power BI service, you have to pay for it. 
 
 Have Fun.
 
