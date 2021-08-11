@@ -169,7 +169,7 @@ There is one more feature is a built in "Search". If after filter the [name], we
 
 ![screenshot1](/assets/img/post19/dummy5.png)
 
-There are many configurations you can try. But there is one drawback is to get rid of the pop up ads in Power BI service, you have to pay for it. 
+There are many configurations you can try. But there are two drawbacks 1) the limit of nodes are 1000 2) to get rid of the pop up ads in Power BI service, you have to pay for it. 
 
 Have Fun.
 
