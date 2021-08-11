@@ -161,7 +161,7 @@ Then create a slicer using the `name` value of `Dim_Path_Search` table.
 
 ### Now, let's play. 
 
-Once you select a nod in [name] slicer, you will get all the related paths with it, which includes all its children and consolidate back to the ultimate parent. You can click any node to expand to next level. Another good part of this visual is it provides contribution % and data bar as well.
+Once you select a node in the [name] slicer, you will get all the related paths with it, which includes all its children and consolidate back to the ultimate parent. You can click any node to expand to next level. Another good part of this visual is it provides contribution % and data bar as well.
 
 ![screenshot1](/assets/img/post19/dummy4.png)
 
