@@ -25,9 +25,9 @@ Another interesting part is the fact table in the DataMart is like blow screensh
 ![screenshot1](/assets/img/post19/dummy1.png)
 
 The issues with it includes:
-1. The path indicates the hierarchy information is not treated as a separate Dimension table, bring this repeated long string into multi million rows dataset will increase the size significantly
-2. The path contains path code but not the final presenting business name, so using split string feature in Power Query is not very straightforward
-3. The path_id corresponding to path string is not one to one relationship, but many to one, which means `path_id` needs to be dealt with to avoid unnecessary duplicate strings 
+1. The path indicating the hierarchy information is not in a separate Dimension table, so bring this repeated long string into multi million rows dataset will increase the size significantly
+2. The path contains path code but not the final business name, so using split string feature in Power Query is not very straightforward
+3. The `path_id` corresponding to `path` string is not one to one relationship, but many to one, which means `path_id` needs to be dealt with to avoid unnecessary duplicate strings 
 
 So, 
 ### Step 1:  we need to model our dataset to separate the dimension of hierarchy
