@@ -37,7 +37,7 @@ Some hints here:
 - When we receive parameters, we define the primary key, then use `drop` method to get all the other column names
 - The condition is just a string, using `split`, `contact`,`for loop` ,etc to design a function generate a string like `target.columnA = update.columnA and (target.ColumnB <> update.ColunB OR target.columnC <> update.ColumnC ....)`
 
-3. Cover most of the situations in one notebook. As above sample code is only for SCD Type 2, we can have a `SCD Type` as input paramter and use `if` statement to merge Type 1 and Type 2 code together.  You can add more situations check like `if delta table exists` ,`if you want do refresh start to remove all the files`
+3. Cover most of the situations in one notebook. As below sample code is only for SCD Type 2, we can have a `SCD Type` as input paramter and use `if` statement to merge Type 1 and Type 2 code together.  You can add more situations check like `if delta table exists` ,`if you want do refresh start to remove all the files`
 
 ```
 customersTable = ...  # DeltaTable with schema (customerId, address, current, effectiveDate, endDate)
