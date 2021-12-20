@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ETL Becomes So Easy with Databricks and Delta Lake
-subtitle: Dimension Table geneeration SCD Type 1 and 2
+subtitle: Dimension Table generation SCD Type 1 and 2
 share-img: /assets/img/post20/socialshare.png
 thumbnail-img: /assets/img/post20/avatar.png
 tags:
