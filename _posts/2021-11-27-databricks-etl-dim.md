@@ -31,7 +31,6 @@ There are three key things in this step:
 These would be your first section in the notebook. Once we finished the design, we can use `table_name = dbutils.widgets.get("")` https://docs.microsoft.com/en-us/azure/databricks/notebooks/widgets (more details here) to accept the parameters value passed from ADF or another notebook.
 
 2. Make the coding dynamic enough with no hard coding. Below is the sample code to Type2 dimension merge by using python from https://docs.delta.io/latest/delta-update.html#language-python. You will notice that the condition is using static column names, which all need to be replaced by a dynamic way for different dimension tables. 
-
 Some hints here:
 - Table can be always alias as `target` and `update`. so we have a fix table name
 - When we receive parameters, we define the primary key, then use `drop` method to get all the other column names
@@ -78,6 +77,7 @@ customersTable.alias("customers").merge(
   }
 ).execute()
 ```
+
 
 3. Cover most of the situations in one notebook. As above sample code is only for SCD Type 2, we can have a `SCD Type` as input paramter and use `if` statement to merge Type 1 and Type 2 code together.  You can add more situations check like `if delta table exists` ,`if you want do refresh start to remove all the files`
 
