@@ -16,19 +16,26 @@ published: true
 category: blog
 ---
 
-Back in old days by using SSIS, when we tried to create a data warehouse, for each dimension table will need to be setup a component in the package. Nowadays with next gen lake house (Delta Lake) concept and databricks, this dimension table generation process (both SCD Type 1 and Type 2) can be super easy and the solution can be replicated for a different data mart. One notebook plus one configuration file can make this happen, and you can use ADF as and orchestrator. I am not going to put detail code here, as this will take your pyspark coding fun, just providing some tips if you are interested with the "next gen" ETL.
+Back in old days by using SSIS, when we tried to create a data warehouse, for each dimension table will need to be setup a component in the package. 
+
+Nowadays with next gen lake house (Delta Lake) concept and databricks, this dimension table generation process (both SCD Type 1 and Type 2) can be super easy and the solution can be replicated for a different data mart. One notebook plus one configuration file can make this happen, and you can use ADF as and orchestrator. 
+
+I am not going to put detail code here, as this will take your pyspark coding fun, just providing some tips if you are interested with the "next gen" ETL.
 
 ### Step 1: Create a notebook to handle one dimension table
 
 There are three key things in this step: 
 
 1. Parameterize all the key factors to ensure this notebook can be used for another dimension table. For example: `table_name`, `schema_name`, `dim_qeury`, `primary_keys` etc. More importantly, you can add `schema_name_prefix` to make the deployment easier switch from int to prod. As long as it eanbles the flexibily for this notebook but also not over complicated to manange.
+
 These would be your first section in the notebook. Once we finished the design, we can use `table_name = dbutils.widgets.get("")` https://docs.microsoft.com/en-us/azure/databricks/notebooks/widgets (more details here) to accept the parameters value passed from ADF or another notebook.
 
-2. Make the coding dynamic enough with no hard coding. Below is the sample code to Type2 dimension merge by using python from https://docs.delta.io/latest/delta-update.html#language-python. You will notice that the condition is using static column names, which all need to be replaced by a dynamic way for different dimension tables. Some hints here:
-table can be always alias as `target` and `update`. so we have a fix table name
-when we receive parameters, we define the primary key, then use `drop` method to get all the other column names
-the condition is just a string, using `split`, `contact`,`for loop` ,etc to design a function generate a string like `target.columnA = update.columnA and (target.ColumnB <> update.ColunB OR target.columnC <> update.ColumnC ....)`
+2. Make the coding dynamic enough with no hard coding. Below is the sample code to Type2 dimension merge by using python from https://docs.delta.io/latest/delta-update.html#language-python. You will notice that the condition is using static column names, which all need to be replaced by a dynamic way for different dimension tables. 
+
+Some hints here:
+- Table can be always alias as `target` and `update`. so we have a fix table name
+- When we receive parameters, we define the primary key, then use `drop` method to get all the other column names
+- The condition is just a string, using `split`, `contact`,`for loop` ,etc to design a function generate a string like `target.columnA = update.columnA and (target.ColumnB <> update.ColunB OR target.columnC <> update.ColumnC ....)`
 
 
 ```
@@ -79,12 +86,13 @@ customersTable.alias("customers").merge(
 This file can be a `CSV` file to easily read from databricks, for each dimension table matching to a row with parameters which will be used for the notebook. 
 
 Tip 1:  do remember some parameter can be created in ADF directly as a high level control, e.g. `schema_name_prefix` can be controlled in pipeline level to switch from int to prod, instead of updating config file. 
+
 TIP 2:  when reading this CSV file, using `.option('multiline', True)` to ensure the `dim_query` reading correctly.
 
 
 ### Step 3: Orchestrate the whole process
 
-In this case, we are using ADF to do the job. I am not going to introduce details here, [Azure Data Factory | Copy multiple tables in Bulk with Lookup & ForEach](https://www.youtube.com/watch?v=KsO2FHQdILs) this youtube video from Adam Marczak explains very clear. Basic step would be read the config file to create a config table, lookup the table and foreach passing the parameters to the notebook. Another youtube video here about [Azure Data Bricks - Pass Parameter to NOTEBOOK from ADF Pipeline](https://www.youtube.com/watch?v=quPsLwDjTds)
+In this case, we are using ADF to do the job. I am not going to introduce details here, [Copy multiple tables in Bulk with Lookup & ForEach](https://www.youtube.com/watch?v=KsO2FHQdILs) this youtube video from Adam Marczak explains very clear. Basic step would be read the config file to create a config table, lookup the table and foreach passing the parameters to the notebook. Another youtube video here about [Azure Data Bricks - Pass Parameter to NOTEBOOK from ADF Pipeline](https://www.youtube.com/watch?v=quPsLwDjTds)
 
 One cool stuff is that ADF will make all these notebooks running in parallel.
 
@@ -93,6 +101,7 @@ One cool stuff is that ADF will make all these notebooks running in parallel.
 ### Anything Else?
 
 There is one issue as we all know is about databricks job cluster warming up, considering if we have multiple notebooks to run in this pipeline, e.g. to generate fact tables. The job culster will shutdown immediately after a notebook activity is done, so it will take very long time with ADF. 
+
 If we are not using ADF, can we use databricks notebook to orchestrate? can we still benefit from the "parallel" running when we for loop the config file? I am going to introduce this in my next blog.
 
 
