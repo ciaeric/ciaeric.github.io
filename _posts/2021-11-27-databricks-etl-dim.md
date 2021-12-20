@@ -22,6 +22,8 @@ Nowadays with next gen lake house (Delta Lake) concept and databricks, this dime
 
 I am not going to put detail code here, as this will take your pyspark coding fun, just providing some tips if you are interested with the "next gen" ETL.
 
+![socialshare](/assets/img/post20/socialshare.png)
+
 ### Step 1: Create a notebook to handle one dimension table
 
 There are three key things in this step: 
