@@ -28,7 +28,7 @@ I am not going to put detail code here, as this will take your pyspark coding fu
 
 There are three key things in this step: 
 
-1. Parameterize all the key factors to ensure this notebook can be used for another dimension table. For example: `table_name`, `schema_name`, `dim_qeury`, `primary_keys` etc. More importantly, you can add `schema_name_prefix` to make the deployment easier switch from int to prod. As long as it eanbles the flexibily for this notebook but also not over complicated to manange.
+1. Parameterize all the key factors to ensure this notebook can be used for another dimension table. For example: `table_name`, `schema_name`, `dim_qeury`, `primary_keys` etc. More importantly, you can add `schema_name_prefix` to make the deployment easier switch from int to prod. As long as it eanbles the flexibily for this notebook but also not over complicated to manage.
 These would be your first section in the notebook. Once we finished the design, we can use `table_name = dbutils.widgets.get("")` https://docs.microsoft.com/en-us/azure/databricks/notebooks/widgets (more details here) to accept the parameters value passed from ADF or another notebook.
 
 2. Make the coding dynamic enough with no hard coding. Below is the sample code to Type2 dimension merge by using python from https://docs.delta.io/latest/delta-update.html#language-python. You will notice that the condition is using static column names, which all need to be replaced by a dynamic way for different dimension tables. 
