@@ -18,7 +18,7 @@ category: blog
 
 Back in old days by using SSIS, when we tried to create a data warehouse, for each dimension table will need to be setup a component in the package. 
 
-Nowadays with next gen lake house (Delta Lake) concept and databricks, this dimension table generation process (both SCD Type 1 and Type 2) can be super easy and the solution can be replicated for a different data mart. One notebook plus one configuration file can make this happen, and you can use ADF as and orchestrator. 
+Nowadays with next gen lake house (Delta Lake) concept and databricks, this dimension table generation process (both SCD Type 1 and Type 2) can be super easy and the solution can be replicated for a different data mart. One notebook plus one configuration file can make this happen, and you can use ADF as an orchestrator. 
 
 I am not going to put detail code here, as this will take your pyspark coding fun, just providing some tips if you are interested with the "next gen" ETL.
 
