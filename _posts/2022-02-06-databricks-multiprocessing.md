@@ -25,6 +25,7 @@ Firstly we all know that when we call a Databricks job (notebook) in ADF, it wil
 ![adfchart](/assets/img/post21/p1.png)
 
 ### Can we reuse one cluster to run all these notebooks to kill those "warming up" time? 
+
 ### Yes, we can.
 
 We can create a "master" notebook and using `dbutils.notebook.run` to call all the notebooks, I think most of you are familiar with this function as it can take parameters/arguments.
@@ -39,7 +40,8 @@ E.g. `dbutils.notebook.run("notebook-name", 60, {"argument": "data", "argument2"
 We can set up all these commands with sequence in one notebook if there are dependencies among them.
 
 ### Now! There is a big benefit missing from ADF : parallel running jobs in Foreach Loop (see below screenshot)
-### Let's handel this one.
+
+### Let's handle this one.
 
 ![adfchart](/assets/img/post21/p2.png)
 
@@ -59,6 +61,7 @@ pool.map(lambda i:
 ```         
 
 Above code is functioning as Foreach Loop in ADF. It will pass the items from `looplist` to the `notebook.run` command as arguments, which is also the parameters (widgets) needed in the `Notebookname`. 
+
 The pool is set as 8 in above code, when you run it, it will be run the notebook with maximum 8 threads in parallel. If 3 of 8 jobs are finished, then it will automatically add another 3 jobs from the list to reach 8.
 
 Please be aware that this number is not the bigger the better, as your job cluster's computing resource limited, so adjust the number as you need.
