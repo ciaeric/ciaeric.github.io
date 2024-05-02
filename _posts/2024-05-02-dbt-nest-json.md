@@ -12,7 +12,6 @@ tags:
 - dbt
 
 published: true
-category: blog
 ---
 
 Dealing with nested JSON data can feel like you’re trying to solve a puzzle where the pieces keep changing shapes. It's tricky, especially when you don't have access to heavy-duty tools like PySpark in Databricks that are built to tackle these kinds of jobs with ease.
