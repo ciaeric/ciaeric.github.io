@@ -12,6 +12,7 @@ tags:
 - dbt
 
 published: true
+category: blog
 ---
 
 Dealing with nested JSON data can feel like you’re trying to solve a puzzle where the pieces keep changing shapes. It's tricky, especially when you don't have access to heavy-duty tools like PySpark in Databricks that are built to tackle these kinds of jobs with ease.
@@ -121,6 +122,7 @@ To make our solution dynamic and reusable across different tables and JSON colum
 
 #### dbt Macro Code
 
+{% raw %}
 ```sql
 {% macro get_nest_json_keys(source_name, table_name, json_column) %}
   {% set query %}
@@ -143,6 +145,8 @@ To make our solution dynamic and reusable across different tables and JSON colum
   {{ return(json_keys) }}
 {% endmacro %}
 ```
+{% endraw %}
+
 #### Explanation
 
 - **Macro Definition:** The `get_nest_json_keys` macro is defined to take three parameters: `source_name`, `table_name`, and `json_column`. These parameters allow the macro to be flexible and used across different sources and tables.
@@ -163,7 +167,9 @@ The final piece of our solution is to create a dbt model that utilizes the `get_
 
 #### dbt Model Code
 
+{% raw %}
 ```sql
+
 {% set keys = get_nest_json_keys('your database name', 'your table name', 'json column name') %}
 
 SELECT
@@ -174,6 +180,8 @@ SELECT
 FROM 
     {{ source('your database name', 'your table name') }}
 ```
+{% endraw %}
+
 #### Explanation
 
 - **Setting Keys:** The macro `get_nest_json_keys` is called to retrieve all keys from the specified JSON column in the given database and table. This set of keys is stored in the variable `keys`.
