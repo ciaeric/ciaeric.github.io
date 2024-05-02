@@ -50,8 +50,6 @@ This approach ensures that every piece of relevant data within any JSON object i
 
 To handle nested JSON data effectively, we need a function that can traverse through all levels of nesting to extract every key. We'll accomplish this by defining a JavaScript UDF in BigQuery. This UDF will use a recursive approach to navigate through both objects and arrays within the JSON structure.
 
-We know in JavaScript, JSON.parse can directly help us to get the key from the object, but remember that we need feed output to `json_extract_scalar` later, so the output need to be entire key path, e.g. `product.detail.brand`
-
 #### SQL to Create the UDF
 
 ```sql
