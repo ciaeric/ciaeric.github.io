@@ -26,7 +26,7 @@ In this case as below screenshot, we have two levels Hierarchy in rows and we'd 
 
 ![screenshot](/assets/img/post13/img1.png)  
 
-We know the key concept `Context` of DAX, I introduced it in my other blog [How to Calculate Percentage of Total in Matrix in Power BI](http://dataink.com.au/2018-04-20-How-to-Get-Perctage-of-Total-in-Matrix/). So we will use `ISINSCOPE` to judge what kind of context the measures are under, and use `ALLSELECTED` to restrain the `context` in the iterative calculation.
+We know the key concept `Context` of DAX, I introduced it in my other blog [How to Calculate Percentage of Total in Matrix in Power BI](https://dataink.com.au/2018-04-20-How-to-Get-Perctage-of-Total-in-Matrix/). So we will use `ISINSCOPE` to judge what kind of context the measures are under, and use `ALLSELECTED` to restrain the `context` in the iterative calculation.
 
 ```
 Shop Comm Movement Rank = 

@@ -68,7 +68,7 @@ What I recommended is **ticking "Show Gridlines" and "Snap Objects to Grid" unde
 
 ### How to manage connections of data sources
 
-I have introduced this topic in my previous blog [Best Practice and Advanced Usage of Parameters in Power BI](http://dataink.com.au/2018-12-11-Parameters-power-bi/).
+I have introduced this topic in my previous blog [Best Practice and Advanced Usage of Parameters in Power BI](https://dataink.com.au/2018-12-11-Parameters-power-bi/).
 
 Manage all your connections in parameters, it's easy for 
 * creating a new query by using the same data source
