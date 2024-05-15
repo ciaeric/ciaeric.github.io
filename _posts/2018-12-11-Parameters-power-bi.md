@@ -51,7 +51,7 @@ If you have more than one servers or databases, or a different type of connectio
 
 ### Quick Example:
 
-Actually, I have an article to explain [**How to pass multi-value Parameters into Power BI SQL Statement**](http://funbiworld.com/2017-11-12-Pass-ParametertoPowerbI/), which is a much more complicated case but using the same method.
+Actually, I have an article to explain [**How to pass multi-value Parameters into Power BI SQL Statement**](http://dataink.com.au/2017-11-12-Pass-ParametertoPowerbI/), which is a much more complicated case but using the same method.
 
 When we develop a report, we will always think what's the possible change or extension, so we prefer to write SQL query with parameters before you moving to Power BI development, like below screenshot, an extremely simple one
 

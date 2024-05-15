@@ -16,7 +16,7 @@ published: true
 category: blog
 ---
 
-In the last paragraph of my previous post [ETL Becomes So Easy with Databricks and Delta Lake](https://funbiworld.com/2021-11-27-databricks-etl-dim/), I left a question about databricks Job Orchestration benefits and issues in ADF, I am going to introduce how do we solve it in this blog. 
+In the last paragraph of my previous post [ETL Becomes So Easy with Databricks and Delta Lake](https://dataink.com.au/2021-11-27-databricks-etl-dim/), I left a question about databricks Job Orchestration benefits and issues in ADF, I am going to introduce how do we solve it in this blog. 
 
 ![socialshare](/assets/img/post21/socialshare.png)
 
