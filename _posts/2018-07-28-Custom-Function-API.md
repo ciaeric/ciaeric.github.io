@@ -48,7 +48,7 @@ I applied an API Key from [MapQuest](https://developer.mapquest.com/) which prov
 And I got the Get URL from [Documentation](https://developer.mapquest.com/documentation/geocoding-api/) like below
 
 ```
-http://www.mapquestapi.com/geocoding/v1/address?key=KEY&location=Washington,DC
+https://www.mapquestapi.com/geocoding/v1/address?key=KEY&location=Washington,DC
 ```
 
 The KEY in this URL needs to be replaced later with my own KEY.

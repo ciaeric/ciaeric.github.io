@@ -25,7 +25,7 @@ I’ve been struggling to get an Australia Map with _Label_ in **Power BI**, fin
 
 ### Step1: Collect Australia state/coast boundaries data
 
-Based on a lot of googling, I find this great [**post**](http://www.elaliberte.info/code), _Etienne Laliberté_ has already helped us to converted `ozRegion()` data to a data frame that can be used in `ggplot2`, which is super. So, download `ozdata.csv` file.
+Based on a lot of googling, I find this great [**post**](https://www.elaliberte.info/code), _Etienne Laliberté_ has already helped us to converted `ozRegion()` data to a data frame that can be used in `ggplot2`, which is super. So, download `ozdata.csv` file.
 
 Becuase There is no ACT state boundaries in this data, I found official ACT data from [data.gov.au](https://data.gov.au/dataset/act-state-boundary-psma-administrative-boundaries). I spent a lot of efforts here to convert `shp` to `csv` file here, all failed. If you understand this kind of data type conversion, just use it.
 
