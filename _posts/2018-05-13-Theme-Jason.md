@@ -70,7 +70,7 @@ Tips here are using tools to get Hex Color Code from different sources.
 
 ![online](/assets/img/post5/Image2.png)
 
-2. The color palette is only a picture. Then use free tool [**PicPick**](http://ngwin.com/picpick) to get the Hex Color Code
+2. The color palette is only a picture. Then use free tool [**PicPick**](https://ngwin.com/picpick) to get the Hex Color Code
 
 -Select "Color Picker" tool
 
