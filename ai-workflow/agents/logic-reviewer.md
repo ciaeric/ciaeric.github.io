@@ -42,6 +42,7 @@ Read the draft and return a structured critique. Do NOT rewrite — findings and
 | Title & subtitle | Accurate and engaging? |
 | Length | Appropriate — not padded, not truncated? |
 | Sweeping claims | Flag any "everyone", "always", "nobody", "almost everyone" — these invite pushback and weaken credibility. Suggest a more precise alternative. |
+| Redundancy | Read each paragraph for duplicate ideas or sentences that repeat the same point in different words — especially after edits or fact-check fixes were applied. |
 
 ## Output Format
 ```

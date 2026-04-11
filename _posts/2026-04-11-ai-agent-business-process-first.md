@@ -41,7 +41,7 @@ Only once you can answer those questions clearly do you know what skills the age
 
 ---
 
-The cost argument alone should be enough to slow people down. Model inference is only about 20% of the total cost of running an agent in production — the remainder is retries, orchestration overhead, and engineering time, based on production cost analyses of enterprise agentic deployments. The rest is retries, wasted tokens, subagent calls triggered by ambiguous instructions, and engineering time spent debugging behaviour that was never defined properly in the first place. Identical tasks can generate wildly different numbers of model calls depending on how well the process was specified upfront.
+The cost argument alone should be enough to slow people down. Model inference is only about 20% of the total cost of running an agent in production — the remainder is retries, wasted tokens, subagent calls triggered by ambiguous instructions, and engineering time spent debugging behaviour that was never defined properly in the first place. Identical tasks can generate wildly different numbers of model calls depending on how well the process was specified upfront.
 
 A retail team deployed a shopping agent that failed in production because it was pulling inventory data from 47 Excel files that hadn't been updated since 2022 — a pattern documented across multiple 2025 production failure case studies. Nobody mapped the data dependencies before building the agent. The process wasn't understood. The agent was blamed.
 
