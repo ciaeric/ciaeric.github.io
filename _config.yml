@@ -1,5 +1,8 @@
 # --- Basic options --- #
 
+# Site URL — required for absolute_url filter (og:image, social sharing)
+url: "https://ciaeric.github.io"
+
 # Name of website
 title: Eric's Blog
 
