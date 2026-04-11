@@ -38,32 +38,9 @@ Socialshare image: `assets/img/postN/socialshare.png`
 ## Step 3 — Show text and ask for approval
 Display the draft. Wait for the user to approve or request changes. Iterate until approved.
 
-## Step 4 — Upload image to LinkedIn
-**4a. Register upload:**
-```bash
-curl -s -X POST "https://api.linkedin.com/v2/assets?action=registerUpload" \
-  -H "Authorization: Bearer $LINKEDIN_ACCESS_TOKEN" \
-  -H "Content-Type: application/json" \
-  -H "X-Restli-Protocol-Version: 2.0.0" \
-  -d '{
-    "registerUploadRequest": {
-      "recipes": ["urn:li:digitalmediaRecipe:feedshare-image"],
-      "owner": "urn:li:person:'"$LINKEDIN_PERSON_ID"'",
-      "serviceRelationships": [{"relationshipType": "OWNER", "identifier": "urn:li:userGeneratedContent"}]
-    }
-  }'
-```
-Extract `uploadUrl` and `asset` URN from response.
+## Step 4 — Post directly
+LinkedIn scrapes the image from the article's og:image tag automatically — no upload needed.
 
-**4b. Upload the image:**
-```bash
-curl -s -X PUT "UPLOAD_URL" \
-  -H "Authorization: Bearer $LINKEDIN_ACCESS_TOKEN" \
-  -H "media-type-family: STILLIMAGE" \
-  --upload-file assets/img/postN/socialshare.png
-```
-
-## Step 5 — Post directly
 ```bash
 curl -s -X POST https://api.linkedin.com/v2/ugcPosts \
   -H "Authorization: Bearer $LINKEDIN_ACCESS_TOKEN" \
@@ -80,8 +57,7 @@ curl -s -X POST https://api.linkedin.com/v2/ugcPosts \
           "status": "READY",
           "description": { "text": "SUBTITLE" },
           "originalUrl": "ARTICLE_URL",
-          "title": { "text": "TITLE" },
-          "thumbnails": [{ "resolvedUrl": "ASSET_URN" }]
+          "title": { "text": "TITLE" }
         }]
       }
     },
