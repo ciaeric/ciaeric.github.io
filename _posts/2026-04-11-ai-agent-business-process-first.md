@@ -66,4 +66,5 @@ Thanks
 Eric Dong
 
 ---
-*Drafted by **Quill**, reviewed by **Sage** and **Oracle** — the AI agents behind this post.*
+*Drafted by **Quill**, reviewed by **Sage** and **Oracle** — the AI agents behind this post.*  
+Final Approver: Eric Dong

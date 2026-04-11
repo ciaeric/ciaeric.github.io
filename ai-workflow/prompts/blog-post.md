@@ -53,7 +53,8 @@ Follow this exact structure:
    Eric
 
    ---
-   *Drafted by **Quill**, reviewed by **Sage** and **Oracle** — the AI agents behind this post.*
+   *Drafted by **Quill**, reviewed by **Sage** and **Oracle** — the AI agents behind this post.*  
+   Final Approver: Eric Dong
 
 Style rules:
 - Direct and technical — no filler
@@ -102,7 +103,8 @@ Follow this structure:
    Eric Dong
 
    ---
-   *Drafted by **Quill**, reviewed by **Sage** and **Oracle** — the AI agents behind this post.*
+   *Drafted by **Quill**, reviewed by **Sage** and **Oracle** — the AI agents behind this post.*  
+   Final Approver: Eric Dong
 
 Style rules:
 - First person, direct, opinionated — say what you actually think
