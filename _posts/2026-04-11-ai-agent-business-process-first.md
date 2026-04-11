@@ -16,7 +16,7 @@ category: blog
 
 AI agents are everywhere right now. Every team wants one. Every vendor is selling one. And too many teams are deploying them in the wrong order.
 
-The conversation usually goes: "We have this problem — let's build an agent to solve it." What comes next is weeks of prompt tuning, escalating API costs, and an agent that half-works at best. Sound familiar? It should. 80% of AI agent projects fail to reach production, and 92% of those that do experience cost overruns averaging 340% above estimates. The models aren't the problem. The missing business process understanding is.
+The conversation usually goes: "We have this problem — let's build an agent to solve it." What comes next is weeks of prompt tuning, escalating API costs, and an agent that half-works at best. Sound familiar? It should. 80% of AI agent projects fail to reach production, and 92% of those that do experience cost overruns averaging 340% above estimates (per recent industry analysis). The models aren't the problem. The missing business process understanding is.
 
 ---
 
@@ -43,11 +43,11 @@ Only once you can answer those questions clearly do you know what skills the age
 
 The cost argument alone should be enough to slow people down. Model inference is only about 20% of the total cost of running an agent in production — the remainder is retries, wasted tokens, subagent calls triggered by ambiguous instructions, and engineering time spent debugging behaviour that was never defined properly in the first place. Identical tasks can generate wildly different numbers of model calls depending on how well the process was specified upfront.
 
-A retail team deployed a shopping agent that failed in production because it was pulling inventory data from 47 Excel files that hadn't been updated since 2022 — a pattern documented across multiple 2025 production failure case studies. Nobody mapped the data dependencies before building the agent. The process wasn't understood. The agent was blamed.
+A retail team deployed a shopping agent that failed in production because it was pulling inventory data from 47 Excel files that hadn't been updated since 2022. The team didn't map the data dependencies before building the agent. The process wasn't understood. The agent was blamed.
 
 ---
 
-My suggestion: before your team ships an agent, you should be able to fill in this one-pager:
+My suggestion: before your team ships an agent, you should be able to fill in this one-pager. Here's what readiness looks like:
 
 1. **Process:** What is the end-to-end process this agent participates in?
 2. **Trigger:** What starts the agent's work?
